@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #F6F7F0;
+    --snd-bg-color: #E7DFD5;
+    --text-color: #000;
+    --main-color: #B89169;
+
+}
+
+html {
+    font: size 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/*-------------------- Header Sectiong ------------------------*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--main-color);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar a {
+    font-size: 2rem;
+    color: var(--bg-color);
+    font-weight: 700;
+    margin-left: 4rem;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navder a:active {
+    color: var(--text-color);
+}
+
+#menu-icon {
+    font-size: 3.5rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    display: none;
+}
+
+/*-------------------------------------------------------------------- Home Sectiong -------------------------------------------------------------------*/
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.home-img img:hover {
+    box-shadow: 0 0 20px var(--main-color),
+                0 0 30px var(--main-color),
+                0 0 40px var(--main-color);
+}
+
+.home-content {
+    margin-left: 5rem;
+}
+
+.home-content h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+.home-content h1 {
+    font-size: 4.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content p {
+    font-size: 1.5rem;
+}
+
+.social-media {
+    display: inline-flex;              /* ใช้ flex เพื่อจัดแถว */
+    justify-content: center;    /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center;        /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 1.5rem;                /* กำหนดระยะห่างระหว่างไอคอนให้เท่ากัน (ประมาณ 24px) */
+    margin: 2.5rem 0;           /* จัดระยะห่าง ด้านบน-ล่าง ของกลุ่มไอคอน */
+}
+
+.social-media a {
+    width: 3rem;                /* กำหนดความกว้างของวงกลมไอคอน */
+    height: 3rem;               /* กำหนดความสูงของวงกลมไอคอน */
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    display: flex;              /* เพื่อให้ไอคอน (ตัวอักษร) อยู่กลางวงกลม */
+    justify-content: center;
+    align-items: center;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+span {
+    color: var(--main-color);
+}
+
+.about-p {
+    font-weight: bold;
+}
+
+/*--------------------------------------------------------------------------------------- About Sectiong --------------------------------------------------------------------------*/
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img {
+    width: 30vw;
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 20px var(--main-color),
+                0 0 30px var(--main-color),
+                0 0 40px var(--main-color);
+}
+
+.about-heading {
+    font-size: 6rem;
+    text-align: left;
+}
+
+.about-content h3 {
+    font-size: 4.5rem;
+}
+
+.about-content p {
+    font-size: 1.5rem;
+}
+
+.text-skill {
+    text-indent: 1em;
+}
+
+.text-about {
+    text-indent: 2em;
+}
+
+/*-------------------------------------------------------------------------------------------- Education&Experience Section ----------------------------------------------------------------------*/
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background: var(--main-color);
+    border-radius: 3rem;
+    box-shadow: none;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 0.3rem var(--main-color);
+}
+
+.education-experience h2 {
+    margin-bottom: 4rem;
+}
+
+.education-experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+}
+
+.education-experience-container {
+    display: flex;
+    flex-wrap: wrap;           /* ให้ขึ้นบรรทัดใหม่เมื่อหน้าจอแคบ */
+    justify-content: center;   /* จัดให้อยู่กึ่งกลางหน้าจอ */
+    gap: 2rem;                 /* ระยะห่างระหว่างแต่ละกล่อง */
+    align-items: stretch;      /* ไม้ตาย: สั่งให้กล่องลูกทุกใบยืดความสูงให้เท่ากันเป๊ะ */
+}
+
+.education-experience-box {
+    flex: 1 1 30rem;           /* ให้กล่องยืดหยุ่นได้ และมีขนาดพื้นฐานประมาณ 300px */
+    display: flex;
+    flex-direction: column;   
+    background: var(--snd-bg-color); 
+    border: .2rem solid var(--main-color);
+    border-radius: 2rem;
+    padding: 3rem 2rem 4rem;
+    text-align: center;
+}
+
+.education-experience-box .btn {
+    margin-top: auto;          /* ดันปุ่มลงไปให้อยู่ล่างสุดของกล่องเสมอ */
+    align-self: center;        /* จัดปุ่มให้อยู่กลางกล่อง */
+}
+
+.education-experience-box h3 {
+    font-size: 2rem;
+    margin: 0 0 0.5rem;
+    margin-top: 1rem;
+}
+
+.education-experience-box h4 {
+    font-size: 1.5rem;
+}
+
+.education-experience-box p {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.education-experience h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.education-experience-box img {
+    width: 40rem;
+    height: 25rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/*----------------------------------------------------------------------- Contact footer Sectiong ------------------------------------------------------------------------*/
+
+.footer {
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 0;
+    background-color: var(--snd-bg-color);
+}
+
+.social-media-footer {
+    display: flex;              /* ใช้ flex เพื่อจัดแถว */
+    justify-content: center;    /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center;        /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    gap: 1.5rem;                /* กำหนดระยะห่างระหว่างไอคอนให้เท่ากัน (ประมาณ 24px) */
+    margin: 2.5rem 0;           /* จัดระยะห่าง ด้านบน-ล่าง ของกลุ่มไอคอน */
+}
+
+.social-media-footer a {
+    width: 3rem;                /* กำหนดความกว้างของวงกลมไอคอน */
+    height: 3rem;               /* กำหนดความสูงของวงกลมไอคอน */
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    color: var(--main-color);
+    display: flex;              /* เพื่อให้ไอคอน (ตัวอักษร) อยู่กลางวงกลม */
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.social-media-footer a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background: var(--snd-bg-color);
+    color: var(--main-color);
+    box-shadow: 0 0 0.5rem var(--main-color);
+}
+
+.footer .contact {
+    font-size: 1.2rem;
+    display: flex;            /* เปลี่ยนจาก inline-flex */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;                /* เพิ่มระยะห่างระหว่าง เบอร์/อีเมล/ที่อยู่ */
+    margin-bottom: 2rem;
+}
+
+.footer h3 {
+    font-size: 1.75rem;
+    padding-bottom: 10px;
+}
+
+/*-------------------------------------------- Responsive Desing ------------------------------------------------------------*/
+
+@media (max-width: 1200px){
+    html {
+        font-size: 55%
+    }
+}
+
+@media (max-width:991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    .section {
+        padding: 10rem 3%;
+    }
+    .education-experience {
+        padding: 7rem;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 991px) {
+    #menu-icon {
+        display: block;
+        color: var(--snd-bg-color);
+        cursor: pointer;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--main-color);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+    .navbar a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navbar.active {
+        right: 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-content {
+        order: 2;
+        margin-left: 1rem;
+    }
+    .home-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    .education-experience {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 617px) {
+    .home-img img {
+        width: 60vw;
+        margin-top: 4rem;
+    }
+    .about-img img{
+        width: 60vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 617px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
